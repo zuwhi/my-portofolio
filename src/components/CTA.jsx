@@ -8,7 +8,7 @@ const CTA = () => {
         Let’s discuss together!
       </p>
       <Link to="/contact" className="btn">
-        Contact
+        Talk to me
       </Link>
     </section>
   );

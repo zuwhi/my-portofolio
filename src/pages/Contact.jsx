@@ -14,19 +14,6 @@ const Contact = () => {
   const [currentAnimation, setCurrentAnimation] = useState("idle");
   const [messages, setMessages] = useState([]);
 
-  // Mengambil data dari Appwrite
-  // const fetchMessages = async () => {
-  //   try {
-  //     const response = await databases.listDocuments(config.databaseID, config.collectionID);
-  //     setMessages(response.documents);
-  //   } catch (error) {
-  //     console.error("Failed to fetch messages:", error.message);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchMessages();
-  // }, []);
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
@@ -53,6 +40,7 @@ const Contact = () => {
         show: true,
         text: "Thank you for your message 😃",
         type: "success",
+         
       });
 
       setTimeout(() => {
@@ -72,14 +60,7 @@ const Contact = () => {
     setLoading(false);
   };
 
-  const handleDelete = async (id) => {
-    try {
-      await databases.deleteDocument(config.databaseID, config.collectionID, id);
-      setMessages(messages.filter((msg) => msg.$id !== id));
-    } catch (error) {
-      console.error("Failed to delete message:", error.message);
-    }
-  };
+
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
