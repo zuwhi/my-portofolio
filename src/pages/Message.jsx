@@ -40,13 +40,14 @@ const Message = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {messages.map((msg) => (
             <div key={msg.$id} className="relative bg-white shadow-lg rounded-lg p-6 border border-gray-200">
               {/* Tombol Hapus di Pojok Kanan Atas */}
               <button className="absolute top-2 right-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded" onClick={() => handleDelete(msg.$id)}>
                 X
               </button>
+              <span className="absolute bottom-1 right-2 text-gray-400 font-bold py-1 px-3 ">{new Date(msg.$createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</span>
 
               {/* Konten Card */}
               <h2 className="text-lg font-semibold mb-2">{msg.name}</h2>
