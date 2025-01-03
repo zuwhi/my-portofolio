@@ -47,12 +47,20 @@ const Message = () => {
               <button className="absolute top-2 right-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded" onClick={() => handleDelete(msg.$id)}>
                 X
               </button>
-              <span className="absolute bottom-1 right-2 text-gray-400 font-bold py-1 px-3 ">{new Date(msg.$createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</span>
+              <span className="absolute bottom-1 right-2 text-gray-400 font-regular py-1 px-3 ">
+                {new Date(msg.$createdAt).toLocaleString([], {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "2-digit",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}
+              </span>
 
               {/* Konten Card */}
               <h2 className="text-lg font-semibold mb-2">{msg.name}</h2>
-              <p className="text-gray-500 mb-2">{msg.email}</p>
-              <p className="text-gray-700">{msg.message}</p>
+              <p className="text-gray-500 mb-2">{msg.telepon}</p>
+              <p className="text-gray-700 pb-3">{msg.message}</p>
             </div>
           ))}
         </div>

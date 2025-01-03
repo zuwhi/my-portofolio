@@ -8,16 +8,19 @@ import { databases, config } from "../appwriteConfig";
 import { ID } from "appwrite";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", telepon: "", message: "" });
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
   const [messages, setMessages] = useState([]);
 
-
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleFocus = () => setCurrentAnimation("walk");
   const handleBlur = () => setCurrentAnimation("idle");
@@ -30,7 +33,7 @@ const Contact = () => {
     try {
       const response = await databases.createDocument(config.databaseID, config.collectionID, ID.unique(), {
         name: form.name,
-        email: form.email,
+        telepon: form.telepon,
         message: form.message,
       });
 
@@ -40,14 +43,13 @@ const Contact = () => {
         show: true,
         text: "Thank you for your message 😃",
         type: "success",
-         
       });
 
       setTimeout(() => {
         hideAlert(false);
         setCurrentAnimation("idle");
-        setForm({ name: "", email: "", message: "" });
-      }, 3000);
+        setForm({ name: "", telepon: "", message: "" });
+      }, 5000);
     } catch (error) {
       console.error(error);
       showAlert({
@@ -60,11 +62,16 @@ const Contact = () => {
     setLoading(false);
   };
 
-
-
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
-      {alert.show && <Alert {...alert} />}
+      {alert.show && (
+        <div className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ${alert.type === "success" ? "text-grey-500" : "text-red-500"}`}>
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <p className="text-lg font-semibold">{alert.type === "success" ? "Success" : "Failed"}</p>
+            <p className="py-4 text-lg font-regular">{alert.text}</p>
+          </div>
+        </div>
+      )}
 
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
@@ -72,11 +79,11 @@ const Contact = () => {
         <form onSubmit={handleSubmit} className="w-full flex flex-col gap-7 mt-14">
           <label className="text-black-500 font-semibold">
             Name
-            <input type="text" name="name" className="input" placeholder="John" required value={form.name} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
+            <input type="text" name="name" className="input" placeholder="ex : Reihan" required value={form.name} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
           </label>
           <label className="text-black-500 font-semibold">
-            Email
-            <input type="email" name="email" className="input" placeholder="John@gmail.com" required value={form.email} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
+            telepon
+            <input type="number" name="telepon" className="input" placeholder="ex : 08123456789" required value={form.telepon} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
           </label>
           <label className="text-black-500 font-semibold">
             Your Message
@@ -87,17 +94,6 @@ const Contact = () => {
             {loading ? "Sending..." : "Submit"}
           </button>
         </form>
-
-        {/* <ul className="mt-10">
-          {messages.map((msg) => (
-            <li key={msg.$id} className="flex justify-between items-center">
-              {msg.message}
-              <button className="btn-danger" onClick={() => handleDelete(msg.$id)}>
-                Delete
-              </button>
-            </li>
-          ))}
-        </ul> */}
       </div>
 
       <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
