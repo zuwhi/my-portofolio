@@ -14,8 +14,8 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          I'm just a nervous guy who wants to be a software developer. especially web and mobile developers. I'm currently studying informatics engineering at UNISNU jepara. I don't have a lot of story, so welcome to my simple website,
-          thank you.
+          I'm just an ordinary guy who wants to be a software developer. especially web and mobile developers. I'm currently studying informatics engineering at UNISNU jepara. I don't have much story, so welcome to my simple website, thank
+          you 🙏.
         </p>
       </div>
 
