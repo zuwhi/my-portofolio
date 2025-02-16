@@ -12,8 +12,8 @@ const Projects = () => {
       </h1>
 
       <p className="text-slate-500 mt-2 leading-relaxed">
-        The projects I work on are generally the result of my work during college, with the main focus on developing innovative projects that have a positive impact and are able to solve problems in society. Some of the projects I have
-        developed are open source, so that they can be continued or further developed with the aim of providing wider benefits to the community. and some of the projects that I have made cannot be displayed for some reason.
+        The projects that I display are projects that I made myself when I was in college, actually I still have some projects that I have made, but because the project is related to work, I cannot display the project because it is private
+        and violates the code of ethics if I display it to the public.
       </p>
 
       <div className="flex flex-wrap my-20 gap-16">
