@@ -10,5 +10,6 @@ import nwdc from "./nwdc.jpeg";
 import ftj from "./ftj.jpeg";
 import nbpc from "./nbpc.jpg";
 import logo from "./R.svg";
+import fesmaro from "./fesmaro.png";
 
-export { hero, meta, shopify, starbucks, tesla, itconvert, pkm, pekanit, nwdc, ftj, nbpc, logo };
+export { hero, meta, shopify, starbucks, tesla, itconvert, pkm, pekanit, nwdc, ftj, nbpc, logo, fesmaro };

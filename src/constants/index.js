@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla, itconvert, pkm, pekanit, nwdc, ftj, nbpc } from "../assets/images";
+import { meta, shopify, starbucks, tesla, itconvert, pkm, pekanit, nwdc, ftj, nbpc, fesmaro } from "../assets/images";
 import { flutter, car, contact, estate, express, git, github, linkedin, docker, nextjs, nodejs, pricewise, react, snapgram, tailwindcss, threads, typescript, linux, flask, figma, appwrite, firebase, laravel } from "../assets/icons";
 
 export const skills = [
@@ -89,10 +89,19 @@ export const skills = [
 
 export const experiences = [
   {
+    title: "2rd Place in Game & Software Development Competition",
+    company_name: "FESMARO 2025, University of Malang (UM)",
+    icon: starbucks,
+    iconBg: "#64748b",
+    image: fesmaro,
+    date: "21 Apr 2024",
+    points: ["Developing and maintaining web applications using React.js and other related technologies."],
+  },
+  {
     title: "3rd Place in Software Development Competition",
     company_name: "ITConvert, University of Jember (UNEJ)",
     icon: starbucks,
-    iconBg: "#64748b",
+    iconBg: "#c026d3",
     image: itconvert,
     date: "28 Sept 2024",
     points: ["Developing and maintaining web applications using React.js and other related technologies."],
@@ -138,7 +147,7 @@ export const experiences = [
     company_name: "Nastional Web Design Competition 2023 HMPSIF",
     icon: meta,
     image: nwdc,
-    iconBg: "#c026d3",
+    iconBg: "#C0C0C0",
     date: "November 2023",
     points: ["Developing and maintaining web applications using React.js and other related technologies."],
   },
