@@ -11,5 +11,6 @@ import ftj from "./ftj.jpeg";
 import nbpc from "./nbpc.jpg";
 import logo from "./R.svg";
 import fesmaro from "./fesmaro.png";
+import unisnu from "./unisnu.jpeg";
 
-export { hero, meta, shopify, starbucks, tesla, itconvert, pkm, pekanit, nwdc, ftj, nbpc, logo, fesmaro };
+export { hero, meta, shopify, starbucks, tesla, itconvert, pkm, pekanit, nwdc, ftj, nbpc, logo, fesmaro, unisnu };
