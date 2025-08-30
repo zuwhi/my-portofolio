@@ -59,6 +59,7 @@ import {
   handy,
   glukofit,
   glukofit2,
+  unisnu,
 } from "../assets/images";
 import { flutter, contact, express, git, github, linkedin, docker, nextjs, nodejs, react, tailwindcss, typescript, linux, flask, figma, appwrite, firebase, laravel } from "../assets/icons";
 
@@ -149,6 +150,16 @@ export const skills = [
 ];
 
 export const experiences = [
+  {
+    title: "Best Graduate UNISNU Jepara",
+    subtitle: "UNISNU Jepara",
+    company_name: "UNISNU Jepara",
+    icon: starbucks,
+    iconBg: "#FFD700",
+    image: unisnu,
+    date: "03 July 2025",
+    points: ["Best Graduate UNISNU Jepara"],
+  },
   {
     title: "2rd Place in Game & Software Development Competition",
     company_name: "FESMARO 2025, University of Malang (UM)",
