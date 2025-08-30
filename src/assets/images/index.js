@@ -49,7 +49,6 @@ import bucyn from "./bucyn.png";
 import xova from "./xova.png";
 import cv from "./cv.png";
 import cv2 from "./cv2.png";
-import katalog from "./katalog.png";
 import percent1 from "./percent (1).png";
 import percent2 from "./percent (2).png";
 import percent3 from "./percent (3).png";
@@ -58,9 +57,18 @@ import plantopia1 from "./plantopia (1).png";
 import plantopia2 from "./plantopia (2).png";
 import plantopia3 from "./plantopia (3).png";
 import plantopia4 from "./plantopia (4).png";
+import katalog1 from "./katalog (1).png";
+import katalog2 from "./katalog (2).png";
+import katalog3 from "./katalog (3).png";
+import handy from "./handy.png";
+
 
 export {
-  katalog,
+
+  katalog1,
+  katalog2,
+  katalog3,
+  handy,
   cv, cv2,
     bucyn,
     xova,

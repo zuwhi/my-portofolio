@@ -53,7 +53,10 @@ import {
   ftj,
   nbpc,
   fesmaro,
-  katalog,
+  katalog1,
+  katalog2,
+  katalog3,
+  handy,
   glukofit,
   glukofit2,
 } from "../assets/images";
@@ -249,6 +252,18 @@ export const projects = [
     images: [percent1, percent2, percent3, percent4],
   },
   {
+    name: "Glukofit",
+    description: "Is a mobile app that uses AI to prevent diabetes by scanning food for Nutrition, monitoring kalories, and providing health tips. Developed using Flutter with state management GetX, Appwrite, Express, Flask.",
+    link: "https://s.id/glukofit",
+    images: [glukofit, glukofit2],
+  },
+  {
+    name: "Mediosa",
+    description: "Website application to provide information and diagnose diseases based on symptom input using decision tree algorithm. developed using Laravel.",
+    link: "https://www.youtube.com/watch?v=9Lhe_8-aGUs",
+    images: [mediosa, mediosa4, mediosa1, mediosa2, mediosa3],
+  },
+  {
     name: "XOVA APP",
     description: "An application to view finished furniture products, developed using Flutter and Appwrite.",
     link: "",
@@ -282,14 +297,15 @@ export const projects = [
     name: "E-Katalog Mebel",
     description: "An application to view finished furniture products, developed using Flutter and Appwrite.",
     link: "https://drive.google.com/drive/folders/1ahlnhrUYwhoamd-RELaT9Lt2JQywINKY",
-    images: [katalog],
+    images: [katalog1, katalog2, katalog3],
   },
   {
-    name: "Glukofit",
+    name: "HandyLang App",
     description: "Is a mobile app that uses AI to prevent diabetes by scanning food for Nutrition, monitoring kalories, and providing health tips. Developed using Flutter with state management GetX, Appwrite, Express, Flask.",
     link: "https://s.id/glukofit",
-    images: [glukofit, glukofit2],
+    images: [handy],
   },
+
   {
     name: "Plantopia (MSIB batch 6)",
     description: "A mobile application focused on agriculture to assist farmers with their farming activities. Developed using Flutter and Firebase.",
@@ -314,11 +330,5 @@ export const projects = [
     description: "just website for detect age and face mask using machine learning. developed using React Js.",
     link: "https://fst-facedetection.vercel.app/",
     images: [face, face1, face2],
-  },
-  {
-    name: "Mediosa",
-    description: "Website application to provide information and diagnose diseases based on symptom input using decision tree algorithm. developed using Laravel.",
-    link: "https://www.youtube.com/watch?v=9Lhe_8-aGUs",
-    images: [mediosa, mediosa4, mediosa1, mediosa2, mediosa3],
   },
 ];

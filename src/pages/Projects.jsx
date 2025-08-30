@@ -54,11 +54,11 @@ const Projects = () => {
         and violates the code of ethics if I display it to the public.
       </p>
 
-      <div className="flex flex-wrap my-20 gap-16">
+      <div className="flex flex-wrap mb-20 mt-10 gap-16">
         {projects.map((project) => (
           <div className="lg:w-[400px] w-full" key={project.name}>
             {project?.images?.length > 0 && (
-              <button className="group relative mt-2 h-40 w-full overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow" onClick={() => openLightbox(project, 0)}>
+              <button className="group relative mt-2 h-64 w-full overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow" onClick={() => openLightbox(project, 0)}>
                 <img src={project.images[0]} alt={`${project.name} cover`} className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105" />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
               </button>
