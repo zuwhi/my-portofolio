@@ -1,7 +1,8 @@
 import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { HelmetProvider } from "react-helmet-async";
 
-import { Footer, Navbar } from "./components";
+import { Footer, Navbar, StructuredData } from "./components";
 import { About, Certificate, Contact, Home, Projects } from "./pages";
 import Message from "./pages/Message";
 import { logPageView } from "./analytics";
@@ -22,30 +23,33 @@ const PageTracker = () => {
 
 const App = () => {
   return (
-    <main className="bg-slate-300/20">
-      <Router>
-        <PageTracker />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/*"
-            element={
-              <>
-                <Routes>
-                  <Route path="/about" element={<About />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/msg" element={<Message />} />
-                  <Route path="/certificate" element={<Certificate />} />
-                </Routes>
-                <Footer />
-              </>
-            }
-          />
-        </Routes>
-      </Router>
-    </main>
+    <HelmetProvider>
+      <StructuredData />
+      <main className="bg-slate-300/20">
+        <Router>
+          <PageTracker />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/*"
+              element={
+                <>
+                  <Routes>
+                    <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/msg" element={<Message />} />
+                    <Route path="/certificate" element={<Certificate />} />
+                  </Routes>
+                  <Footer />
+                </>
+              }
+            />
+          </Routes>
+        </Router>
+      </main>
+    </HelmetProvider>
   );
 };
 
