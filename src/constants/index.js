@@ -60,6 +60,12 @@ import {
   glukofit,
   glukofit2,
   unisnu,
+  semat1,
+  semat2,
+  semat3,
+  ceria1,
+  ceria2,
+  ceria3,
 } from "../assets/images";
 import { flutter, contact, express, git, github, linkedin, docker, nextjs, nodejs, react, tailwindcss, typescript, linux, flask, figma, appwrite, firebase, laravel } from "../assets/icons";
 
@@ -267,6 +273,18 @@ export const projects = [
     description: "Is a mobile app that uses AI to prevent diabetes by scanning food for Nutrition, monitoring kalories, and providing health tips. Developed using Flutter with state management GetX, Appwrite, Express, Flask.",
     link: "https://s.id/glukofit",
     images: [glukofit, glukofit2],
+  },
+  {
+    name: "Ceria Ibadah",
+    description: "An educational app teaching children basic Islamic worship through simple guides and visuals.",
+    link: "https://play.google.com/store/apps/details?id=com.radiwara.ceriaibadah&hl=id",
+    images: [ceria3,ceria1, ceria2],
+  },
+  {
+    name: "Desa Wisata Semat",
+    description: "Developed a village website with an admin dashboard for ticket generation, transactions, article, and visitor statistics.",
+    link: "https://desawisatasemat.com/",
+    images: [semat1, semat2, semat3],
   },
   {
     name: "Mediosa",

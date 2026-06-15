@@ -61,6 +61,12 @@ import katalog1 from "./katalog (1).png";
 import katalog2 from "./katalog (2).png";
 import katalog3 from "./katalog (3).png";
 import handy from "./handy.png";
+import semat1 from "./semat1.png";
+import semat2 from "./semat2.png";
+import semat3 from "./semat3.png";
+import ceria1 from "./ceria (1).webp";
+import ceria2 from "./ceria (2).webp";
+import ceria3 from "./ceria (3).webp";
 
 
 export {
@@ -127,4 +133,10 @@ export {
   logo,
   fesmaro,
   unisnu,
+  ceria1,
+  ceria2,
+  ceria3,
+  semat1,
+  semat2,
+  semat3
 };
