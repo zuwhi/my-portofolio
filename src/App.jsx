@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Footer, Navbar, StructuredData } from "./components";
 import { About, Certificate, Contact, Home, Projects } from "./pages";
@@ -49,6 +50,7 @@ const App = () => {
           </Routes>
         </Router>
       </main>
+      <Analytics />
     </HelmetProvider>
   );
 };
